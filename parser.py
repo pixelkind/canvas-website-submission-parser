@@ -18,7 +18,7 @@ if os.path.exists(dir_path):
       bs = BeautifulSoup(content, "html.parser")
       url = bs.a["href"]
       title = bs.head.title.text
-      name = title.split(": ")[1]
+      name = title.split(": ")[-1]
       
       writer.writerow([name, url])
 
